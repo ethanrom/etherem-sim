@@ -34,9 +34,11 @@ def get_new_tokens():
         timestamp, market_cap = token
         if market_cap > 20000:
             coin_token = data["prices"][data["market_caps"].index(token)][1]
-            # Convert the coin_token to hex format
             coin_token_hex = float_to_hex(coin_token)
             new_tokens.append((coin_token_hex, timestamp, market_cap))
+    
+    new_tokens.sort(key=lambda x: x[1], reverse=True)
+    
     return new_tokens
 
 def float_to_hex(f):
