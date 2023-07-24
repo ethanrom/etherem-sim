@@ -1,0 +1,6 @@
+pandas
+numpy
+streamlit_option_menu
+plotly
+scikit-learn
+feedparser
